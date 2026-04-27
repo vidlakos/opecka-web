@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Návodíček - Stack Overflow</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Liberation Sans", sans-serif;
+            background-color: #f8f9f9;
+            color: #242729;
+            margin: 0;
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        .top-bar {
+            background-color: #f48024;
+            height: 3px;
+            width: 100%;
+        }
+
+        .header {
+            background-color: #f8f9f9;
+            border-top: 1px solid #e4e6e8;
+            border-bottom: 1px solid #e4e6e8;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1264px;
+            padding: 0 16px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            text-decoration: none;
+        }
+
+            .logo span {
+                font-weight: normal;
+            }
+
+        .container {
+            max-width: 1264px;
+            margin: 0 auto;
+            display: flex;
+            padding: 24px 16px;
+        }
+
+        .main-content {
+            flex: 1;
+            background: #fff;
+            padding: 24px;
+            border: 1px solid #e4e6e8;
+            border-radius: 3px;
+        }
+
+        h1 {
+            font-size: 27px;
+            margin-bottom: 8px;
+            color: #3b4045;
+            border-bottom: 1px solid #e4e6e8;
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 19px;
+            border-bottom: 1px solid #e4e6e8;
+            padding-bottom: 8px;
+            margin-top: 30px;
+            color: #232629;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .post-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border: 1px solid #e4e6e8;
+            border-radius: 3px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .disclaimer {
+            background-color: #fdf7e3;
+            border-left: 4px solid #f1b604;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .tags {
+            margin: 20px 0;
+        }
+
+            .tags span {
+                background-color: #e1ecf4;
+                color: #39739d;
+                padding: 4px 8px;
+                border-radius: 3px;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+
+        .user-info {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .user-card {
+            background-color: #d9eaf7;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"></div>
+    <div class="header">
+        <div class="header-content"><a href="#" class="logo">stack<span>overflow</span></a></div>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>BASIC SETUP</h1>
+
+            <p>PŘI INSTALACI WINSERVERU = VŽDY DESKTOP EXPERIENCE</p>
+
+            <h2>SSH</h2>
+            <p>Pro ssh (linux I win) =&gt; Ssh user@IP</p>
+            <p>SSH NA WINDOWS 11</p>
+
+            <img src="Obrázek2.png" alt="Obrázek 2" class="post-image">
+            <img src="Obrázek3.png" alt="Obrázek 3" class="post-image">
+            <img src="Obrázek4.png" alt="Obrázek 4" class="post-image">
+
+            <p>Pro automatické spouštění SSH serveru pak v services nastavit typ spouštění</p>
+            <img src="Obrázek5.png" alt="Obrázek 5" class="post-image">
+
+            <p>Pro fungovaní pak musíme ve firewallu vytvořit nové příchozí pravidlo (tam povolíme port 22)</p>
+
+            <h2>SAMBA pro LINUX</h2>
+            <p>Nainstalujeme sambu</p>
+            <p>POZOR =&gt; service se nejmenuje “smb” ale “smbd”!!!</p>
+            <p>Udelame v configu novou sekci (podle toho, jak nazveme sekci se pak bude jmenovat “slozka” na sdileni)</p>
+
+            <img src="Obrázek6.png" alt="Obrázek 6" class="post-image">
+
+            <p>Povolime sambu na firewallu</p>
+            <img src="Obrázek7.png" alt="Obrázek 7" class="post-image">
+
+            <p>Pridame heslo pro usera na sambu</p>
+            <img src="Obrázek8.png" alt="Obrázek 8" class="post-image">
+
+            <p>Pak se pripojime</p>
+            <img src="Obrázek9.png" alt="Obrázek 9" class="post-image">
+
+            <p>Na Windows se pak pripojime pomoci \\</p>
+            <img src="Obrázek10.png" alt="Obrázek 10" class="post-image">
+
+            <p>Pokud chceme sdilet slozky na Win a pripojit se z linuxu =&gt; Ve Windows nasdilime adresar a v Linuxu se pak pripojime</p>
+            <img src="Obrázek11.png" alt="Obrázek 11" class="post-image">
+
+            <p>Pokud chceme W =&gt; W pak jen ve file exploreru: \\192.168.134.130\share</p>
+
+            <h2>RDP</h2>
+            <p>Windows =&gt; Windows</p>
+            <p>Povolíme RDP v nastavení</p>
+            <p>“Připojení ke vzdálené ploše” =&gt; IP</p>
+            <p>Linux =&gt; Windows</p>
+            <p>Remmina</p>
+
+            <h2>VNC</h2>
+            <p>Windows =&gt; TightVNC (klient)</p>
+            <p>Linux =&gt; VNC server - https://forums.linuxmint.com/viewtopic.php?t=418876</p>
+            <p>Tezko rict, zda tohle funguje, muj pocitac je shit a sekne se mi virtual pri pripojovani</p>
+
+            <h2>IIS</h2>
+            <p>V IIS Manageru udelame novy site</p>
+            <img src="Obrázek12.png" alt="Obrázek 12" class="post-image">
+
+            <p>Vybereme tam site name, host name (www.priklad.com) a root folder</p>
+            <p>Pokud chceme pak stranku zobrazit na linuxu, musime do /etc/hosts pridat IP adresu + hostname</p>
+            <img src="Obrázek13.png" alt="Obrázek 13" class="post-image">
+
+            <p>Pak uz si v prohlizeci pres http muzeme zobrazit stranku</p>
+            <img src="Obrázek14.png" alt="Obrázek 14" class="post-image">
+
+            <h2>NGINX Linux</h2>
+            <p>Pripojime se pres ssh na linux (ten na ktery pristupujeme vzdalene)</p>
+            <p>Apt install nginx</p>
+            <p>Ve /var/www udelame novy adresar pro root nasi stranky</p>
+            <img src="Obrázek15.png" alt="Obrázek 15" class="post-image">
+
+            <p>Tam pak udelame nas index</p>
+            <img src="Obrázek16.png" alt="Obrázek 16" class="post-image">
+            <img src="Obrázek17.png" alt="Obrázek 17" class="post-image">
+
+            <p>V /etc/nginx/sites-available/ udelame novy config pro nasi stranku (uz je tam default config, ktery ma vzorovou sekci, takze ji staci zkopirovat a trochu zmenit pro nase ucely)</p>
+            <img src="Obrázek18.png" alt="Obrázek 18" class="post-image">
+
+            <p>Musíme pak udělam symlink tohoto configu do sites-enabled</p>
+            <img src="Obrázek19.png" alt="Obrázek 19" class="post-image">
+
+            <p>Reloadneme nginx</p>
+            <p>Pridame do hosts hostname a IP</p>
+            <img src="Obrázek20.png" alt="Obrázek 20" class="post-image">
+
+            <p>A uz nam to funguje  😛</p>
+            <img src="Obrázek21.png" alt="Obrázek 21" class="post-image">
+
+            <h2>AD DS</h2>
+            <p>Pri pridavani AD DS musime pridat i DNS server</p>
+            <img src="Obrázek22.png" alt="Obrázek 22" class="post-image">
+
+            <p>Pak musime promotnout server na domenovy kontroller</p>
+            <img src="Obrázek23.png" alt="Obrázek 23" class="post-image">
+
+            <p>Vzhledem k tomu, ze nemame zadnou domenu jeste vytvorenou, ani forest, musime vytvorit novy forest a zvolit root domain name</p>
+            <img src="Obrázek24.png" alt="Obrázek 24" class="post-image">
+
+            <p>V AD Users and Computers vytvorime nove Organizational Unit (OU) tak, aby jsme meli tento strom</p>
+            <img src="Obrázek25.png" alt="Obrázek 25" class="post-image">
+
+            <p>V lide pak vytvorime nejakeho uzivatele, pomoci ktereho se pak na Win11 prihlasime do domeny.</p>
+            <img src="Obrázek26.png" alt="Obrázek 26" class="post-image">
+            <img src="Obrázek27.png" alt="Obrázek 27" class="post-image">
+
+            <p>V Group Policy Management pak vytvorime novy Group Policy Object (object s pravidly)</p>
+            <img src="Obrázek28.png" alt="Obrázek 28" class="post-image">
+
+            <p>Vytvori se nam group policy object, pomoci edit pak muzeme zvolit jaka pravidla zde pouzijeme</p>
+            <img src="Obrázek29.png" alt="Obrázek 29" class="post-image">
+
+            <p>Zvolime si nejake pravidlo, co rychle pozname, treba tohle</p>
+            <p>Tip: doporucuju si trochu s tim pak pohrat a vyzkouset si par dalsich</p>
+            <img src="Obrázek30.png" alt="Obrázek 30" class="post-image">
+
+            <p>Dvojklikem na pravidlo pak otevreme detaily pravidla, kde muzeme pravidlo povolit</p>
+            <img src="Obrázek31.png" alt="Obrázek 31" class="post-image">
+
+            <p>Pak pravidlo pretahneme do pozadovane OU</p>
+            <p>Pro spravne fungovani AD DS pak musime udelat par veci</p>
+            <p>Na WinServeru pak musi DNS byt IP adresa serveru. Pokud porad chceme pristup k internetu, jako alternativni DNS dame tu nasi venkovni.!!!!!!!</p>
+            <img src="Obrázek32.png" alt="Obrázek 32" class="post-image">
+
+            <p>Pak v DNS Manageru vytvorime novou Forward Lookup Zone</p>
+            <img src="Obrázek33.png" alt="Obrázek 33" class="post-image">
+            <img src="Obrázek34.png" alt="Obrázek 34" class="post-image">
+            <img src="Obrázek35.png" alt="Obrázek 35" class="post-image">
+            <img src="Obrázek36.png" alt="Obrázek 36" class="post-image">
+
+            <p>Abychom pripojili nas Win11 pocitac do domeny, musime ho v jeho nastaveni dat preferovanou DNS na IP server a pridat do domeny</p>
+            <img src="Obrázek37.png" alt="Obrázek 37" class="post-image">
+
+            <p>Mensi tip – pokud si chceme overit, jestli vse funguje a PC vidi do domeny, muzeme v cmd dat: ping testik.goon</p>
+            <img src="Obrázek38.png" alt="Obrázek 38" class="post-image">
+            <img src="Obrázek39.png" alt="Obrázek 39" class="post-image">
+
+            <p>Restartujeme pocitac a prihlasime se do domeny pod uzivatelem, ktereho jsme vytvorili predtim (u me to je Sala Maleykoum)</p>
+            <img src="Obrázek40.png" alt="Obrázek 40" class="post-image">
+
+            <p>A jak muzeme videt, na desktopu nemame kos, jupi</p>
+            <img src="Obrázek41.png" alt="Obrázek 41" class="post-image">
+
+            <div class="tags">
+                <span>návodíček</span> <span>windows-server</span> <span>linux</span>
+            </div>
+
+            <div class="user-info">
+                <div class="user-card">
+                    <div>asked today</div>
+                    <div style="color: #0074cc; margin-top: 5px;">user</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
